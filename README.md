@@ -1,2 +1,2 @@
-# javascript-puro
+# JavaScript-Puro
 Algumas funcionalidades com JavaScript Puro 🟡
