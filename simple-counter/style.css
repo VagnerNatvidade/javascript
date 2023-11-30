@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+}
+
+#app {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+span {
+  font-size: 12rem;
+}
+
+button {
+  padding: 0.8rem 2.4rem;
+  border: 2px solid;
+  border-radius: 0.8rem;
+  background: transparent;
+  transition: 0.2s ease;
+  box-shadow: hsla(0, 0%, 0%, 0.1) 0 0 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  scale: 1.01;
+}
