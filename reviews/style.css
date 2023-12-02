@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --hue: 200;
+  --primary-color: hsla(var(--hue), 50%, 60%, 1);
+  --white: hsl(0, 0%, 100%);
+  --bg-body: hsla(var(--hue), 50%, 80%, 0.1);
+  --shadow: hsla(0, 0%, 0%, 0.1);
+  --tt-about: hsl(var(--hue), 20%, 50%, 0.5);
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  background: var(--bg-body);
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 8rem;
+  text-align: center;
+}
+
+hr {
+  width: 8rem;
+  height: 0.6rem;
+  margin: 1.6rem auto;
+  border: none;
+  background-color: var(--primary-color);
+}
+
+#card {
+  padding: 3.2rem;
+  margin-top: 2.4rem;
+  border-radius: 0.8rem;
+  background: white;
+  box-shadow: var(--shadow) 0 0 10px;
+}
+
+.background-img {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  margin: 0 auto 2.4rem;
+}
+
+.background-img::before {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: -4px;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background-color: var(--primary-color);
+}
+
+.background-img::after {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  z-index: 2;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 999px;
+  font-size: 6rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  border-radius: 999px;
+}
+
+.name {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.skill {
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+}
+
+.about {
+  color: var(--tt-about);
+  margin-bottom: 2.4rem;
+}
+
+.controls button {
+  margin-bottom: 1.6rem;
+  border: none;
+  background: none;
+  transition: 0.2s ease;
+}
+
+.controls button:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+i {
+  font-size: 3.2rem;
+  color: var(--primary-color);
+}
+
+.btn-random {
+  padding: 0.4rem 1.4rem;
+  border: none;
+  border-radius: 0.4rem;
+  color: var(--white);
+  background: var(--primary-color);
+  transition: 0.2s ease;
+}
+
+.btn-random:hover {
+  padding: 0.4rem 1.8rem;
+  cursor: pointer;
+}
