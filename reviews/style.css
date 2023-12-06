@@ -9,7 +9,7 @@
   --hue: 200;
   --primary-color: hsla(var(--hue), 50%, 60%, 1);
   --white: hsl(0, 0%, 100%);
-  --bg-body: hsla(var(--hue), 50%, 80%, 0.1);
+  --bg-body: hsla(var(--hue), 50%, 80%, 0.3);
   --shadow: hsla(0, 0%, 0%, 0.1);
   --tt-about: hsl(var(--hue), 20%, 50%, 0.5);
 }
@@ -24,8 +24,11 @@ main {
   height: 100vh;
   display: grid;
   place-content: center;
-  padding: 8rem;
   text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
 }
 
 hr {
@@ -37,8 +40,9 @@ hr {
 }
 
 #card {
-  padding: 3.2rem;
-  margin-top: 2.4rem;
+  width: min(64rem, 90%);
+  padding: 2.4rem;
+  margin: 4rem auto 0;
   border-radius: 0.8rem;
   background: white;
   box-shadow: var(--shadow) 0 0 10px;
@@ -46,8 +50,8 @@ hr {
 
 .background-img {
   position: relative;
-  width: 16rem;
-  height: 16rem;
+  width: 14rem;
+  height: 14rem;
   margin: 0 auto 2.4rem;
 }
 
@@ -85,6 +89,7 @@ img {
   top: 0;
   z-index: 1;
   border-radius: 999px;
+  object-fit: cover;
 }
 
 .name {
@@ -93,17 +98,20 @@ img {
 }
 
 .skill {
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.8rem;
   text-transform: uppercase;
+  color: var(--primary-color);
 }
 
 .about {
+  padding: 0 4rem;
+  text-align: center;
   color: var(--tt-about);
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.2rem;
 }
 
 .controls button {
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.8rem;
   border: none;
   background: none;
   transition: 0.2s ease;
