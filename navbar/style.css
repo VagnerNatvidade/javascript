@@ -6,79 +6,101 @@
 
 :root {
   font-size: 62.5%;
-  --hue: 195;
-  --tt-primary-color: hsl(0, 0%, 0%) 00;
-  --tt-second-color: hsl(var(--hue), 50%, 70%);
-  --bg-medias: hsl(var(--hue), 50%, 50%);
-  --bg-medias-hover: hsl(var(--hue), 50%, 70%);
 }
 
 body {
   font-size: 1.6rem;
   font-family: sans-serif;
-  letter-spacing: 0.4rem;
+  letter-spacing: 3px;
 }
 
-header,
-ul {
+.nav-center {
   display: flex;
-}
-
-header {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
   box-shadow: hsla(0, 0%, 0%, 0.1) 0 1px 10px;
 }
 
-.btn-navbar {
+button {
   display: none;
-  margin-left: auto;
+  background: none;
   border: none;
   font-size: 2.4rem;
-  background: none;
-  transition: .3s ease;
+  transition: 0.4s ease;
 }
 
-.btn-navbar:hover {
-  color: var(--tt-second-color);
-  transform:rotate(90deg);
+button:hover {
+  transform: rotate(90deg);
+  cursor: pointer;
 }
 
 ul {
+  display: flex;
   list-style: none;
 }
 
-.navigation {
-  gap: 1.6rem;
+.links {
+  gap: 2.4rem;
+}
+
+.social-icons {
+  gap: 0.6rem;
+}
+
+.links a {
+  font-size: 1.4rem;
 }
 
 a {
   text-decoration: none;
-  color: var(--tt-primary-color);
-  transition: 0.2s ease;
+  color: black;
 }
 
-a:hover {
-  color: var(--tt-second-color);
-}
-
-.social-media li {
-  color: var(--bg-medias);
-  transition: 0.2s ease;
-}
-
-.social-media li:hover {
-  color: var(--bg-medias-hover);
-}
-
-@media (max-width: 786px) {
-  .navigation,
-  .social-media {
-    display: none;
+@media (max-width: 768px) {
+  .nav-center {
+    align-items: start;
+    flex-direction: column;
+    padding: 0;
   }
 
-  .btn-navbar {
+  .nav-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  button {
     display: initial;
+  }
+
+  .links {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.2s linear;
+  }
+
+  .show-links {
+    height: 16rem;
+  }
+
+  .links li {
+    width: 100%;
+    padding: 1rem 2rem;
+    transition: 0.3s ease;
+  }
+
+  .links li:hover {
+    padding-left: 3.2rem;
+    color: hsl(195, 53%, 79%);
+    background: hsl(195, 53%, 79%);
+  }
+
+  .social-icons {
+    display: none;
   }
 }
