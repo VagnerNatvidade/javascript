@@ -13,6 +13,7 @@ button {
   height: 3.2rem;
   border: none;
   font-size: 3.2rem;
+  cursor: pointer;
   background: transparent;
 }
 
@@ -30,6 +31,8 @@ body {
   width: 3.2rem;
   height: 3.2rem;
   font-size: 3.2rem;
+  color: hsl(270, 80%, 50%);
+  animation: heartbeat 1s ease infinite;
 }
 
 aside {
@@ -40,13 +43,27 @@ aside {
   height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  padding: 4rem;
   box-shadow: 1px 0 10px hsla(0, 0%, 0%, 0.2);
+  transition: 0.2s ease;
   transform: translate(-100%);
 }
 
 .show-sidebar {
   transform: translate(0);
+}
+
+aside div {
+  padding: 4rem;
+}
+
+#btn-close {
+  transition: 0.2s ease;
+  color: hsl(270, 80%, 50%);
+}
+
+#btn-close:hover {
+  transform: scale(1.1);
+  color: hsl(270, 80%, 80%);
 }
 
 li {
@@ -62,14 +79,30 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 4rem;
 }
 
-.pages li + li {
-  margin-top: 2.4rem;
+.pages li {
+  padding: 2rem 4rem;
+  transition: .2s ease;
+}
+
+.pages li:hover {
+  background: hsl(270, 80%, 90%);
 }
 
 .links {
   display: flex;
   justify-content: space-around;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
