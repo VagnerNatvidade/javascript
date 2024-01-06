@@ -16,3 +16,67 @@ body {
   font-family: sans-serif;
   background: url("https://source.unsplash.com/random") center/cover no-repeat;
 }
+
+button {
+  border: none;
+  background: transparent;
+}
+
+main,
+dialog {
+  padding: 6rem;
+  border: none;
+  border-radius: 1rem;
+  text-align: center;
+  background: white;
+}
+
+main {
+  box-shadow: 0 4px 10px hsla(0, 0%, 0%, 0.3);
+}
+
+h1 {
+  margin-bottom: 4.8rem;
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+.btn-open-modal {
+  padding: 0.6rem 1.6rem;
+  border: 2px solid hsla(280, 100%, 70%, 1);
+  border-radius: 1rem;
+  letter-spacing: 2px;
+  color: white;
+  background: hsla(280, 100%, 70%, 1);
+  transition: 0.3s ease;
+}
+
+.btn-open-modal:hover {
+  color: hsla(280, 100%, 70%, 1);
+  background: transparent;
+}
+
+dialog {
+  margin: auto;
+  position: relative;
+}
+
+.btn-close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: hsla(0, 100%, 35%, 1);
+  transition: 0.2s ease;
+}
+
+.btn-close-modal:hover {
+  transform: scale(1.2);
+}
+
+dialog::backdrop {
+  background: hsla(0, 0%, 0%, 0.4);
+}
