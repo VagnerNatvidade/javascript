@@ -2,6 +2,8 @@ import * as el from "./elements.js";
 
 let counter = 0;
 
+
+
 export const decrease = () => {
   counter--;
   el.span.textContent = counter;
